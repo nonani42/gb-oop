@@ -11,6 +11,7 @@ namespace Snake
         public int x;
         public int y;
         public char sym;
+
         public Point(int _x, int _y, char _sym)
         {
             x = _x;
@@ -18,7 +19,7 @@ namespace Snake
             sym = _sym;
         }
         
-        public void Draw(int x, int y, char sym)
+        public void DrawPoint()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);

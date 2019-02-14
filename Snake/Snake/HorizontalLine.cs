@@ -20,11 +20,11 @@ namespace Snake
             }
         }
 
-        public void Draw()
+        public void DrawLine()
         {
             foreach(Point p in pList)
             {
-                p.Draw(p.x, p.y, p.sym);
+                p.DrawPoint();
             }
         }
     }
