@@ -10,6 +10,7 @@ namespace Snake
     {
         static void Main(string[] args)
         {
+            //frame
             Console.SetWindowSize(80, 25);
             HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
             HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
@@ -19,8 +20,17 @@ namespace Snake
             downLine.DrawLine();
             leftLine.DrawLine();
             rightLine.DrawLine();
-            Point p1 = new Point(3, 3, '*');
+
+            //food
+            Point p1 = new Point(10, 10, '#');
             p1.DrawPoint();
+            Point p2 = new Point(14, 21, '#');
+            p2.DrawPoint();
+
+            //snake
+            Point tail = new Point(5, 5, '*');
+            Snake snake = new Snake(tail, 3, Direction.RIGHT);
+            snake.DrawLine();
 
 
             Console.ReadLine();
