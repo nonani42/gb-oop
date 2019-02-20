@@ -49,5 +49,11 @@ namespace Snake
                 x = x + offset;
             }
         }
+
+        internal void Clear()
+        {
+            sym = ' ';
+            DrawPoint();
+        }
     }
 }
