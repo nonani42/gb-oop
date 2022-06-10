@@ -30,6 +30,7 @@ namespace Snake
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
         }
+
         public void Move(int offset, Direction direction)
         {
             if(direction == Direction.UP)
@@ -48,6 +49,11 @@ namespace Snake
             {
                 x = x + offset;
             }
+        }
+
+        internal bool IsHit(Point point)
+        {
+            return x == point.x && y == point.y;
         }
 
         internal void Clear()
